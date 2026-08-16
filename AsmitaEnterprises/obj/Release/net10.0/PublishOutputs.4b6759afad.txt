@@ -1,6 +1,0 @@
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\appsettings.Development.json
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\appsettings.json
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\vercel.json
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\AsmitaEnterprises.runtimeconfig.json
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\dotnet.js
-I:\AS\AsmitaEnterprises\obj\Release\net10.0\browser-wasm\PubTmp\Out\web.config
