@@ -1,0 +1,53 @@
+@inject LanguageService Lang
+@inject ProductService Products
+@inject WhatsAppService WA
+@implements IDisposable
+
+<section id="products" class="products-section py-5 bg-white">
+  <div class="container-xl">
+    <div class="text-center mb-5">
+      <h2 class="section-heading text-navy fw-black text-uppercase tracking-wide">
+        @Lang.GetText("Products_Heading")
+      </h2>
+      <div class="heading-line mx-auto bg-primary rounded"></div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+      @foreach (var item in Products.GetProducts())
+      {
+        <div class="col">
+          <div class="card h-100 product-card border rounded-4 shadow-sm text-center transition-all p-3 d-flex flex-column justify-content-between">
+            <div>
+              <div class="product-img-wrapper mb-3 p-2 bg-sky-light rounded-3 d-flex align-items-center justify-content-center" style="height: 180px;">
+                <img src="@item.ImageUrl" alt="@item.Name" class="img-fluid max-h-100 object-fit-contain" loading="lazy" width="160" height="160" />
+              </div>
+              <h3 class="h5 fw-bold text-navy mb-2">@Lang.GetText(item.NameKey)</h3>
+              <p class="small text-secondary mb-3">@Lang.GetText(item.DescriptionKey)</p>
+            </div>
+            
+            <div>
+              <a href="@WA.GetProductEnquiryUrl(Lang.GetText(item.NameKey), Lang.CurrentLanguage)" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-semibold d-inline-flex align-items-center justify-content-center gap-1">
+                <span>@Lang.GetText("CTA_EnquireNow")</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Lang.OnLanguageChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        Lang.OnLanguageChanged -= StateHasChanged;
+    }
+}

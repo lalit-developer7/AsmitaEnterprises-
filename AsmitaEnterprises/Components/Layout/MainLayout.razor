@@ -1,0 +1,24 @@
+@inherits LayoutComponentBase
+
+<div class="asmita-app-wrapper min-vh-100 d-flex flex-column bg-light">
+    <HeaderSection />
+
+    <main class="flex-grow-1">
+        @Body
+    </main>
+
+    <FooterSection OnOpenTerms="OpenTerms" />
+
+    <FloatingWhatsApp />
+
+    <TermsModal @bind-IsOpen="_isTermsOpen" />
+</div>
+
+@code {
+    private bool _isTermsOpen;
+
+    private void OpenTerms()
+    {
+        _isTermsOpen = true;
+    }
+}

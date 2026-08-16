@@ -1,0 +1,117 @@
+@inject LanguageService Lang
+@inject WhatsAppService WA
+@inject SiteContentService Site
+@implements IDisposable
+
+<header class="header-container sticky-top bg-white border-bottom shadow-sm">
+  <div class="container-xl">
+    <div class="d-flex align-items-center justify-content-between py-2 py-lg-3">
+      <!-- Brand Logo -->
+      <a href="#home" class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" aria-label="Asmita Enterprises Home">
+        <img src="images/logo/logo.svg" alt="Asmita Enterprises Logo" class="brand-logo" width="220" height="50" />
+      </a>
+
+      <!-- Desktop Nav & Right Controls -->
+      <div class="d-none d-lg-flex align-items-center gap-4">
+        <nav class="d-flex gap-3 gap-xl-4 align-items-center fw-medium">
+          <a href="#home" class="nav-link-custom">@Lang.GetText("Nav_Home")</a>
+          <a href="#products" class="nav-link-custom">@Lang.GetText("Nav_Products")</a>
+          <a href="#services" class="nav-link-custom">@Lang.GetText("Nav_Services")</a>
+          <a href="#why-us" class="nav-link-custom">@Lang.GetText("Nav_WhyUs")</a>
+          <a href="#reviews" class="nav-link-custom">@Lang.GetText("Nav_Reviews")</a>
+          <a href="#contact" class="nav-link-custom">@Lang.GetText("Nav_Contact")</a>
+        </nav>
+
+        <!-- Right Side Controls: Lang Switcher & CTAs -->
+        <div class="d-flex align-items-center gap-3 ps-3 border-start">
+          <div class="lang-switcher d-flex gap-1 text-muted small fw-semibold">
+            <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none @(Lang.CurrentLanguage == "en" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("en")'>English</button>
+            <span>|</span>
+            <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none @(Lang.CurrentLanguage == "mr" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("mr")'>मराठी</button>
+            <span>|</span>
+            <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none @(Lang.CurrentLanguage == "hi" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("hi")'>हिंदी</button>
+          </div>
+
+          <a href="tel:+919834555868" class="btn btn-primary btn-sm px-3 rounded-pill d-inline-flex align-items-center gap-1 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg>
+            <span>@Lang.GetText("CTA_CallNow")</span>
+          </a>
+
+          <a href="@WA.GetGeneralEnquiryUrl(Lang.CurrentLanguage)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm px-3 rounded-pill d-inline-flex align-items-center gap-1 shadow-sm text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.779-.114.133-.23.148-.427.05-.197-.099-.832-.307-1.586-.98-.588-.524-.985-1.171-1.1-1.368-.115-.198-.013-.306.086-.404.089-.088.197-.23.296-.346.099-.115.133-.197.197-.329.065-.133.033-.247-.017-.346-.05-.099-.445-1.072-.61-1.466-.16-.384-.323-.332-.445-.338-.114-.007-.247-.007-.38-.007s-.346.05-.527.247c-.182.198-.691.676-.691 1.65 0 .973.708 1.912.807 2.044.099.133 1.395 2.13 3.38 2.984.472.203.84.324 1.127.416.474.152.905.13 1.246.08.38-.058 1.17-.478 1.338-.94.168-.463.168-.86.117-.941-.051-.082-.183-.133-.38-.232z"/>
+            </svg>
+            <span>@Lang.GetText("CTA_WhatsApp")</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="lang-switcher d-flex gap-1 text-muted extra-small fw-semibold me-1">
+          <button type="button" class="btn btn-link btn-xs p-0 text-decoration-none @(Lang.CurrentLanguage == "en" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("en")'>EN</button>
+          <span>|</span>
+          <button type="button" class="btn btn-link btn-xs p-0 text-decoration-none @(Lang.CurrentLanguage == "mr" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("mr")'>मराठी</button>
+          <span>|</span>
+          <button type="button" class="btn btn-link btn-xs p-0 text-decoration-none @(Lang.CurrentLanguage == "hi" ? "text-primary fw-bold" : "text-dark")" @onclick='() => SetLang("hi")'>हिंदी</button>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary p-2 border-0" @onclick="ToggleMobileMenu" aria-label="Toggle Navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Nav Drawer -->
+  @if (_isMobileMenuOpen)
+  {
+    <div class="mobile-drawer d-lg-none bg-white border-top p-3 shadow">
+      <nav class="d-flex flex-column gap-3 mb-3">
+        <a href="#home" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_Home")</a>
+        <a href="#products" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_Products")</a>
+        <a href="#services" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_Services")</a>
+        <a href="#why-us" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_WhyUs")</a>
+        <a href="#reviews" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_Reviews")</a>
+        <a href="#contact" class="mobile-nav-link" @onclick="CloseMobileMenu">@Lang.GetText("Nav_Contact")</a>
+      </nav>
+      <div class="d-flex flex-column gap-2">
+        <a href="tel:+919834555868" class="btn btn-primary w-100 rounded-pill text-center">@Lang.GetText("CTA_CallNow")</a>
+        <a href="@WA.GetGeneralEnquiryUrl(Lang.CurrentLanguage)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-100 rounded-pill text-center text-white">@Lang.GetText("CTA_WhatsApp")</a>
+      </div>
+    </div>
+  }
+</header>
+
+@code {
+    private bool _isMobileMenuOpen;
+
+    protected override void OnInitialized()
+    {
+        Lang.OnLanguageChanged += StateHasChanged;
+    }
+
+    private void SetLang(string code)
+    {
+        Lang.SetLanguage(code);
+    }
+
+    private void ToggleMobileMenu()
+    {
+        _isMobileMenuOpen = !_isMobileMenuOpen;
+    }
+
+    private void CloseMobileMenu()
+    {
+        _isMobileMenuOpen = false;
+    }
+
+    public void Dispose()
+    {
+        Lang.OnLanguageChanged -= StateHasChanged;
+    }
+}

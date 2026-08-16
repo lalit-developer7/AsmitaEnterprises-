@@ -1,0 +1,56 @@
+[
+  {
+    "id": "s1",
+    "nameKey": "Svc_Install_Title",
+    "name": "Installation",
+    "descriptionKey": "Svc_Install_Desc",
+    "description": "Professional installation at your location.",
+    "iconType": "wrench",
+    "displayOrder": 1
+  },
+  {
+    "id": "s2",
+    "nameKey": "Svc_Servicing_Title",
+    "name": "Servicing",
+    "descriptionKey": "Svc_Servicing_Desc",
+    "description": "Regular servicing for better performance.",
+    "iconType": "cog",
+    "displayOrder": 2
+  },
+  {
+    "id": "s3",
+    "nameKey": "Svc_Filter_Title",
+    "name": "Filter Replacement",
+    "descriptionKey": "Svc_Filter_Desc",
+    "description": "Genuine filters with best quality.",
+    "iconType": "filter",
+    "displayOrder": 3
+  },
+  {
+    "id": "s4",
+    "nameKey": "Svc_Repair_Title",
+    "name": "Repair",
+    "descriptionKey": "Svc_Repair_Desc",
+    "description": "All types of repair services.",
+    "iconType": "tools",
+    "displayOrder": 4
+  },
+  {
+    "id": "s5",
+    "nameKey": "Svc_AMC_Title",
+    "name": "AMC / Maintenance",
+    "descriptionKey": "Svc_AMC_Desc",
+    "description": "Annual maintenance contracts available.",
+    "iconType": "shield-check",
+    "displayOrder": 5
+  },
+  {
+    "id": "s6",
+    "nameKey": "Svc_Assembly_Title",
+    "name": "Custom Assembly",
+    "descriptionKey": "Svc_Assembly_Desc",
+    "description": "Assembly as per your water & budget.",
+    "iconType": "cogs",
+    "displayOrder": 6
+  }
+]

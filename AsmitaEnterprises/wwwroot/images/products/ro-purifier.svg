@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="pBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <filter id="pSh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <ellipse cx="200" cy="360" rx="140" ry="15" fill="#0f172a" opacity="0.08"/>
+  <g filter="url(#pSh)" transform="translate(100, 30)">
+    <!-- Cabinet Body -->
+    <rect x="0" y="0" width="200" height="310" rx="16" fill="url(#pBody)" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Top Blue Tank -->
+    <path d="M 0 16 Q 0 0 16 0 L 184 0 Q 200 0 200 16 L 200 150 L 0 150 Z" fill="url(#pBlue)"/>
+    <rect x="15" y="20" width="170" height="115" rx="8" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-opacity="0.5"/>
+    <rect x="30" y="35" width="140" height="24" rx="12" fill="#ffffff"/>
+    <rect x="30" y="70" width="140" height="24" rx="12" fill="#ffffff"/>
+    <!-- Bottom White Body -->
+    <rect x="0" y="150" width="200" height="160" rx="0" fill="#ffffff"/>
+    <path d="M 0 294 Q 0 310 16 310 L 184 310 Q 200 310 200 294 L 200 150 L 0 150 Z" fill="#ffffff"/>
+    <!-- Status Indicator -->
+    <rect x="88" y="170" width="24" height="80" rx="12" fill="#0f172a"/>
+    <circle cx="100" cy="188" r="4" fill="#38bdf8"/>
+    <circle cx="100" cy="210" r="4" fill="#22c55e"/>
+    <!-- Water Tap -->
+    <circle cx="100" cy="265" r="7" fill="#0284c7"/>
+  </g>
+</svg>

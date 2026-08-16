@@ -1,0 +1,102 @@
+@inject LanguageService Lang
+@inject SiteContentService Site
+@inject WhatsAppService WA
+@implements IDisposable
+
+<footer class="footer-section text-white pt-5 pb-3" style="background-color: #07192b;">
+  <div class="container-xl">
+    <div class="row g-4 pb-4 border-bottom border-white border-opacity-10">
+      <!-- Column 1: Brand & Contact -->
+      <div class="col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="images/logo/logo.svg" alt="Asmita Enterprises" width="200" height="45" class="brand-logo-light" />
+        </div>
+        <p class="small text-light text-opacity-75 mb-3">
+          @Site.Settings.Statement
+        </p>
+        <div class="d-flex flex-column gap-2 small text-light text-opacity-75">
+          <div>📞 <a href="tel:+919834555868" class="text-white text-decoration-none fw-semibold">@Site.Settings.PhonePrimary</a></div>
+          <div>✉️ <a href="mailto:@Site.Settings.Email" class="text-white text-decoration-none">@Site.Settings.Email</a></div>
+        </div>
+      </div>
+
+      <!-- Column 2: Office Location -->
+      <div class="col-lg-4 col-md-6">
+        <h3 class="h6 fw-bold text-uppercase tracking-wide text-primary mb-3">OUR OFFICE</h3>
+        <p class="small text-light text-opacity-75 mb-2">
+          <strong>@Site.Settings.BusinessName</strong><br/>
+          @Site.Settings.Address
+        </p>
+        <a href="@Site.Settings.GoogleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-xs rounded-pill px-3 mt-1">
+          @Lang.GetText("CTA_GetDirections")
+        </a>
+      </div>
+
+      <!-- Column 3: Follow Us / Social Links -->
+      <div class="col-lg-4 col-md-12">
+        <h3 class="h6 fw-bold text-uppercase tracking-wide text-primary mb-3">@Lang.GetText("Footer_FollowUs")</h3>
+        <div class="d-flex flex-column gap-2 small">
+          <a href="@Site.Settings.GoogleBusinessUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
+            <span class="badge bg-white text-dark rounded-circle p-1">G</span>
+            <span>Google Business (@Site.Settings.GoogleBusinessName)</span>
+          </a>
+          <a href="@Site.Settings.FacebookUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
+            <span class="badge bg-primary text-white rounded-circle p-1">f</span>
+            <span>Facebook</span>
+          </a>
+          <a href="@WA.GetGeneralEnquiryUrl(Lang.CurrentLanguage)" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
+            <span class="badge bg-success text-white rounded-circle p-1">WA</span>
+            <span>WhatsApp (+91 98345 55868)</span>
+          </a>
+          <a href="@Site.Settings.JustdialUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
+            <span class="badge bg-warning text-dark rounded-circle p-1">JD</span>
+            <span>Justdial</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Trust Badges Bar -->
+    <div class="row row-cols-1 row-cols-md-3 g-3 py-3 text-center border-bottom border-white border-opacity-10 small text-light text-opacity-80">
+      <div class="col">
+        <span class="me-2">🚚</span> @Lang.GetText("Footer_Badge_Delivery")
+      </div>
+      <div class="col">
+        <span class="me-2">💳</span> @Lang.GetText("Footer_Badge_Online")
+      </div>
+      <div class="col">
+        <span class="me-2">💵</span> @Lang.GetText("Footer_Badge_COD")
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Links -->
+    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-3 extra-small text-light text-opacity-60 gap-2">
+      <div>
+        @Lang.GetText("Footer_Copyright")
+      </div>
+      <div class="d-flex gap-3">
+        <button type="button" class="btn btn-link btn-xs text-light text-opacity-75 p-0 text-decoration-none" @onclick="OnOpenTerms">
+          @Lang.GetText("Footer_Terms")
+        </button>
+        <span>|</span>
+        <button type="button" class="btn btn-link btn-xs text-light text-opacity-75 p-0 text-decoration-none" @onclick="OnOpenTerms">
+          @Lang.GetText("Footer_Privacy")
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+@code {
+    [Parameter] public EventCallback OnOpenTerms { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Lang.OnLanguageChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        Lang.OnLanguageChanged -= StateHasChanged;
+    }
+}

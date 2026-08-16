@@ -1,0 +1,54 @@
+@inject LanguageService Lang
+
+@if (IsOpen)
+{
+  <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px);" role="dialog" aria-modal="true" aria-labelledby="termsModalLabel">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-4 border-0 shadow-lg">
+        <div class="modal-header border-bottom bg-sky-light px-4 py-3">
+          <h2 class="modal-title h5 fw-bold text-navy mb-0" id="termsModalLabel">
+            @Lang.GetText("Footer_Terms") & @Lang.GetText("Footer_Privacy")
+          </h2>
+          <button type="button" class="btn-close" aria-label="Close" @onclick="CloseModal"></button>
+        </div>
+
+        <div class="modal-body p-4 text-secondary small">
+          <h3 class="h6 fw-bold text-navy mb-3">Terms & Conditions</h3>
+          <ol class="mb-4 ps-3">
+            <li class="mb-2">Product availability may vary based on stock and local configurations.</li>
+            <li class="mb-2">1 Year Warranty applies according to applicable manufacturer and assembly product terms.</li>
+            <li class="mb-2">Free servicing within warranty period is subject to applicable terms and conditions.</li>
+            <li class="mb-2">Delivery availability depends on pin code and courier logistics in specific locations.</li>
+            <li class="mb-2">Cash on Delivery (COD) is available exclusively in Pune & Pimpri-Chinchwad locations where applicable.</li>
+            <li class="mb-2">Courier delivery for other cities in Maharashtra & India is subject to courier partner serviceability.</li>
+            <li class="mb-2">Out-of-warranty service charges may apply depending on repair requirements and spare replacement.</li>
+            <li class="mb-2">Product images shown are for representation purposes; actual product design may vary depending on customized assembly.</li>
+            <li class="mb-2">Prices may change based on specific water quality parameters, filter stage requirements, and custom configurations.</li>
+            <li class="mb-2">Customers are advised to confirm product specifications and water TDS testing before final purchase.</li>
+            <li class="mb-2">Terms and conditions are subject to change without prior notice.</li>
+          </ol>
+
+          <h3 class="h6 fw-bold text-navy mb-3">Privacy Policy</h3>
+          <p class="mb-0">
+            Asmita Enterprises respects customer privacy. We collect basic contact details provided directly via WhatsApp or phone calls solely to deliver water purifier sales, installation, and maintenance services. We do not sell or share customer personal information with third parties.
+          </p>
+        </div>
+
+        <div class="modal-footer border-top bg-light px-4 py-3">
+          <button type="button" class="btn btn-primary px-4 rounded-pill btn-sm" @onclick="CloseModal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public EventCallback<bool> IsOpenChanged { get; set; }
+
+    private async Task CloseModal()
+    {
+        IsOpen = false;
+        await IsOpenChanged.InvokeAsync(false);
+    }
+}
