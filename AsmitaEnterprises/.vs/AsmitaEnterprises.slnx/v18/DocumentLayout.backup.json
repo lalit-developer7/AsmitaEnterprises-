@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\models\\sitesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:models\\sitesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\sections\\demosection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:sections\\demosection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\sections\\reviewssection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:sections\\reviewssection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\sections\\truststripsection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:sections\\truststripsection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|i:\\asmita-enterprises\\asmitaenterprises\\sections\\productssection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D54DC4ED-6D95-401B-9CF6-F872A2A4A4C8}|AsmitaEnterprises.csproj|solutionrelative:sections\\productssection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SiteSettings.cs",
-              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Models\\SiteSettings.cs",
-              "RelativeDocumentMoniker": "Models\\SiteSettings.cs",
-              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Models\\SiteSettings.cs",
-              "RelativeToolTip": "Models\\SiteSettings.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA3wBIAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T17:23:29.039Z",
+              "Title": "DemoSection.razor",
+              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\DemoSection.razor",
+              "RelativeDocumentMoniker": "Sections\\DemoSection.razor",
+              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\DemoSection.razor",
+              "RelativeToolTip": "Sections\\DemoSection.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAnwCMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-16T18:04:19.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReviewsSection.razor",
-              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\ReviewsSection.razor",
-              "RelativeDocumentMoniker": "Sections\\ReviewsSection.razor",
-              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\ReviewsSection.razor",
-              "RelativeToolTip": "Sections\\ReviewsSection.razor",
-              "ViewState": "AgIAACoAAABAMzMzMzMgwDAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-16T17:23:00.675Z",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AgIAACkAAAAAMDMzMzPzvzwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T17:50:14.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TrustStripSection.razor",
-              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\TrustStripSection.razor",
-              "RelativeDocumentMoniker": "Sections\\TrustStripSection.razor",
-              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\TrustStripSection.razor",
-              "RelativeToolTip": "Sections\\TrustStripSection.razor",
-              "ViewState": "AgIAABAAAACQmZmZmZkXwBQAAAATAAAAAAAAAA==",
+              "Title": "ProductsSection.razor",
+              "DocumentMoniker": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\ProductsSection.razor",
+              "RelativeDocumentMoniker": "Sections\\ProductsSection.razor",
+              "ToolTip": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\Sections\\ProductsSection.razor",
+              "RelativeToolTip": "Sections\\ProductsSection.razor",
+              "ViewState": "AgIAAAkAAABgZmZmZmYkwA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-16T17:22:42.356Z",
+              "WhenOpened": "2026-08-16T17:49:50.84Z",
               "EditorCaption": ""
             }
           ]

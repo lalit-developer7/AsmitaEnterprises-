@@ -14,7 +14,7 @@ public class ProductService
             Name = "RO Water Purifier",
             DescriptionKey = "Product_RO_Desc",
             Description = "Advanced RO technology for pure & safe drinking water.",
-            ImageUrl = "images/products/ro-purifier.webp",
+            ImageUrl = "images/products/ro-purifier.jpg",
             Category = "RO",
             DisplayOrder = 1
         },
@@ -25,7 +25,7 @@ public class ProductService
             Name = "RO + UV",
             DescriptionKey = "Product_RO_UV_Desc",
             Description = "RO + UV purification for extra protection and better health.",
-            ImageUrl = "images/products/ro-uv-purifier.webp",
+            ImageUrl = "images/products/ro-uv-purifier.jpg",
             Category = "RO+UV",
             DisplayOrder = 2
         },
@@ -36,7 +36,7 @@ public class ProductService
             Name = "RO + UV + UF",
             DescriptionKey = "Product_RO_UV_UF_Desc",
             Description = "Complete protection with RO + UV + UF for your family's health.",
-            ImageUrl = "images/products/ro-uv-uf-purifier.webp",
+            ImageUrl = "images/products/ro-uv-uf-purifier.jpg",
             Category = "RO+UV+UF",
             DisplayOrder = 3
         },
@@ -47,7 +47,7 @@ public class ProductService
             Name = "Commercial RO Systems",
             DescriptionKey = "Product_Comm_Desc",
             Description = "High performance systems for offices, institutions & industries.",
-            ImageUrl = "images/products/commercial-ro.webp",
+            ImageUrl = "images/products/commercial-ro.jpg",
             Category = "Commercial",
             DisplayOrder = 4
         },
@@ -58,7 +58,7 @@ public class ProductService
             Name = "Customized Water Filter Assembly",
             DescriptionKey = "Product_Custom_Desc",
             Description = "We assemble filters as per your requirement and budget.",
-            ImageUrl = "images/products/custom-assembly.webp",
+            ImageUrl = "images/products/custom-assembly.jpg",
             Category = "Custom",
             DisplayOrder = 5
         }

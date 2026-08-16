@@ -1,0 +1,7 @@
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\demo-purifier.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\hero-purifier.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\products\commercial-ro.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\products\custom-assembly.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\products\ro-purifier.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\products\ro-uv-purifier.svg
+I:\Asmita-Enterprises\AsmitaEnterprises\wwwroot\images\products\ro-uv-uf-purifier.svg
