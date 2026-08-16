@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "I:\\Asmita-Enterprises\\AsmitaEnterprises\\AsmitaEnterprises.csproj": {}
+    "I:\\AS\\AsmitaEnterprises\\AsmitaEnterprises.csproj": {}
   },
   "projects": {
-    "I:\\Asmita-Enterprises\\AsmitaEnterprises\\AsmitaEnterprises.csproj": {
+    "I:\\AS\\AsmitaEnterprises\\AsmitaEnterprises.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\AsmitaEnterprises.csproj",
+        "projectUniqueName": "I:\\AS\\AsmitaEnterprises\\AsmitaEnterprises.csproj",
         "projectName": "AsmitaEnterprises",
-        "projectPath": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\AsmitaEnterprises.csproj",
+        "projectPath": "I:\\AS\\AsmitaEnterprises\\AsmitaEnterprises.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "I:\\Asmita-Enterprises\\AsmitaEnterprises\\obj\\",
+        "outputPath": "I:\\AS\\AsmitaEnterprises\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "G:\\Software\\VIsual Studio 2026 Community\\Shared\\NuGetPackages"
