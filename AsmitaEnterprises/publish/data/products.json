@@ -1,0 +1,57 @@
+[
+  {
+    "id": "p1",
+    "nameKey": "Product_RO_Title",
+    "name": "RO Water Purifier",
+    "descriptionKey": "Product_RO_Desc",
+    "description": "Advanced RO technology to give you pure & safe drinking water.",
+    "imageUrl": "images/products/ro-purifier.webp",
+    "category": "RO",
+    "isActive": true,
+    "displayOrder": 1
+  },
+  {
+    "id": "p2",
+    "nameKey": "Product_RO_UV_Title",
+    "name": "RO + UV",
+    "descriptionKey": "Product_RO_UV_Desc",
+    "description": "RO + UV purification for extra protection and better health.",
+    "imageUrl": "images/products/ro-uv-purifier.webp",
+    "category": "RO+UV",
+    "isActive": true,
+    "displayOrder": 2
+  },
+  {
+    "id": "p3",
+    "nameKey": "Product_RO_UV_UF_Title",
+    "name": "RO + UV + UF",
+    "descriptionKey": "Product_RO_UV_UF_Desc",
+    "description": "Complete protection with RO + UV + UF for your family's health.",
+    "imageUrl": "images/products/ro-uv-uf-purifier.webp",
+    "category": "RO+UV+UF",
+    "isActive": true,
+    "displayOrder": 3
+  },
+  {
+    "id": "p4",
+    "nameKey": "Product_Comm_Title",
+    "name": "Commercial RO Systems",
+    "descriptionKey": "Product_Comm_Desc",
+    "description": "High performance systems for offices, institutions & industries.",
+    "imageUrl": "images/products/commercial-ro.webp",
+    "category": "Commercial",
+    "isActive": true,
+    "displayOrder": 4
+  },
+  {
+    "id": "p5",
+    "nameKey": "Product_Custom_Title",
+    "name": "Customized Water Filter Assembly",
+    "descriptionKey": "Product_Custom_Desc",
+    "description": "We assemble filters as per your requirement and budget.",
+    "imageUrl": "images/products/custom-assembly.webp",
+    "category": "Custom",
+    "isActive": true,
+    "displayOrder": 5
+  }
+]
