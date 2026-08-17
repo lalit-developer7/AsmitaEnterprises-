@@ -15,8 +15,14 @@
           @Site.Settings.Statement
         </p>
         <div class="d-flex flex-column gap-2 small text-light text-opacity-75">
-          <div>📞 <a href="tel:+919834555868" class="text-white text-decoration-none fw-semibold">@Site.Settings.PhonePrimary</a></div>
-          <div>✉️ <a href="mailto:@Site.Settings.Email" class="text-white text-decoration-none">@Site.Settings.Email</a></div>
+          <div class="d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="text-primary flex-shrink-0" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+            <a href="tel:+919834555868" class="text-white text-decoration-none fw-semibold">@Site.Settings.PhonePrimary</a>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="text-primary flex-shrink-0" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+            <a href="mailto:@Site.Settings.Email" class="text-white text-decoration-none">@Site.Settings.Email</a>
+          </div>
         </div>
       </div>
 
@@ -27,7 +33,8 @@
           <strong>@Site.Settings.BusinessName</strong><br/>
           @Site.Settings.Address
         </p>
-        <a href="@Site.Settings.GoogleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-xs rounded-pill px-3 mt-1">
+        <a href="@Site.Settings.GoogleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-xs rounded-pill px-3 mt-1 d-inline-flex align-items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
           @Lang.GetText("CTA_GetDirections")
         </a>
       </div>
@@ -37,19 +44,27 @@
         <h3 class="h6 fw-bold text-uppercase tracking-wide text-primary mb-3">@Lang.GetText("Footer_FollowUs")</h3>
         <div class="d-flex flex-column gap-2 small">
           <a href="@Site.Settings.GoogleBusinessUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
-            <span class="badge bg-white text-dark rounded-circle p-1">G</span>
+            <span class="social-icon-badge bg-white text-dark d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:28px;height:28px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M15.545 6.558a9.969 9.969 0 0 1 .931 2.523c-.006-.027-.008-.052-.008-.077m0 0a9 9 0 0 1-.468-2.127c.159-.017.317-.031.475-.046a5.7 5.7 0 0 0 .582-.198 6.016 6.016 0 0 0 2.133-1.307M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m.931-.86C1.484 3.38.864 5.194.864 7.11c0 1.917.795 3.658 2.073 4.858.06.058.117.118.174.175a8.963 8.963 0 0 0 3.148-1.062c.493-.176.994-.355 1.494-.523A4.993 4.993 0 0 0 8 11c-1.13 0-2.179-.342-3.043-.927a11.222 11.222 0 0 1-.971-.316A8 8 0 0 1 .931.86z"/></svg>
+            </span>
             <span>Google Business (@Site.Settings.GoogleBusinessName)</span>
           </a>
           <a href="@Site.Settings.FacebookUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
-            <span class="badge bg-primary text-white rounded-circle p-1">f</span>
+            <span class="social-icon-badge bg-primary text-white d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:28px;height:28px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.79.157 1.79.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+            </span>
             <span>Facebook</span>
           </a>
           <a href="@WA.GetGeneralEnquiryUrl(Lang.CurrentLanguage)" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
-            <span class="badge bg-success text-white rounded-circle p-1">WA</span>
+            <span class="social-icon-badge bg-success text-white d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:28px;height:28px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.779-.114.133-.23.148-.427.05-.197-.099-.832-.307-1.586-.98-.588-.524-.985-1.171-1.1-1.368-.115-.198-.013-.306.086-.404.089-.088.197-.23.296-.346.099-.115.133-.197.197-.329.065-.133.033-.247-.017-.346-.05-.099-.445-1.072-.61-1.466-.16-.384-.323-.332-.445-.338-.114-.007-.247-.007-.38-.007s-.346.05-.527.247c-.182.198-.691.676-.691 1.65 0 .973.708 1.912.807 2.044.099.133 1.395 2.13 3.38 2.984.472.203.84.324 1.127.416.474.152.905.13 1.246.08.38-.058 1.17-.478 1.338-.94.168-.463.168-.86.117-.941-.051-.082-.183-.133-.38-.232z"/></svg>
+            </span>
             <span>WhatsApp (+91 98345 55868)</span>
           </a>
           <a href="@Site.Settings.JustdialUrl" target="_blank" rel="noopener noreferrer" class="text-light text-opacity-75 text-decoration-none d-flex align-items-center gap-2 hover-text-white">
-            <span class="badge bg-warning text-dark rounded-circle p-1">JD</span>
+            <span class="social-icon-badge bg-warning text-dark d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:28px;height:28px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.399l-.451.003.082-.381 1.92-.002z"/><path d="M8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>
+            </span>
             <span>Justdial</span>
           </a>
         </div>
@@ -58,14 +73,17 @@
 
     <!-- Middle Trust Badges Bar -->
     <div class="row row-cols-1 row-cols-md-3 g-3 py-3 text-center border-bottom border-white border-opacity-10 small text-light text-opacity-80">
-      <div class="col">
-        <span class="me-2">🚚</span> @Lang.GetText("Footer_Badge_Delivery")
+      <div class="col d-flex align-items-center justify-content-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-primary" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7z"/></svg>
+        <span>@Lang.GetText("Footer_Badge_Delivery")</span>
       </div>
-      <div class="col">
-        <span class="me-2">💳</span> @Lang.GetText("Footer_Badge_Online")
+      <div class="col d-flex align-items-center justify-content-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-primary" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
+        <span>@Lang.GetText("Footer_Badge_Online")</span>
       </div>
-      <div class="col">
-        <span class="me-2">💵</span> @Lang.GetText("Footer_Badge_COD")
+      <div class="col d-flex align-items-center justify-content-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-primary" viewBox="0 0 16 16"><path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.878c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/></svg>
+        <span>@Lang.GetText("Footer_Badge_COD")</span>
       </div>
     </div>
 

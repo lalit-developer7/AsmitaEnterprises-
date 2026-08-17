@@ -40,6 +40,10 @@
     <!-- App Custom CSS -->
     <link rel="stylesheet" href="css/app.css" />
 
+    <!-- Preload Blazor framework for faster boot -->
+    <link rel="preload" href="_framework/blazor.webassembly.js" as="script" crossorigin />
+    <link rel="modulepreload" href="_framework/blazor.webassembly.js" crossorigin />
+
     <!-- LocalBusiness JSON-LD Schema -->
     <script type="application/ld+json">
     {
