@@ -1,6 +1,7 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "outputDirectory": "publish",
   "headers": [
     {
       "source": "/_framework/(.*)",
