@@ -10,31 +10,31 @@ public class ReviewService
         new Review
         {
             Id = "r1",
-            AuthorName = "Prakash Deshmukh",
+            AuthorName = "Mandage Parag",
             Initial = "P",
             Rating = 5.0,
             TimeAgo = "2 weeks ago",
-            Comment = "Excellent service and good product quality. Installation was done perfectly. Very happy!",
+            Comment = "Excellent service experience. Sir arrived on time, checked the water purifier thoroughly, replaced the required parts, and ensured proper functioning before leaving. He also explained the maintenance tips clearly. Highly recommended.",
             AvatarBgColor = "#718096"
         },
         new Review
         {
             Id = "r2",
-            AuthorName = "Sneha Patil",
+            AuthorName = "Omkar Patil",
             Initial = "S",
             Rating = 5.0,
             TimeAgo = "1 month ago",
-            Comment = "Very professional team. Demo was very helpful in choosing the right filter for our home.",
+            Comment = "Great service by Asmita Water Solutions. The water purifier installation was quick and professional. The machine is working perfectly and the person was polite and helpful. Highly satisfied.",
             AvatarBgColor = "#3182ce"
         },
         new Review
         {
             Id = "r3",
-            AuthorName = "Rohit Sharma",
+            AuthorName = "Mahesh Raykar",
             Initial = "R",
             Rating = 5.0,
             TimeAgo = "1 month ago",
-            Comment = "Best quality water filters at reasonable price. Free servicing is a big plus. Highly recommended!",
+            Comment = "I have been using this water filter along with their service for the past 9 years. The water quality has been consistently good, and Mr. Anil Mahajan sir is prompt and professional. Maintenance and part replacements are handled smoothly. Highly satisfied with the product and service.",
             AvatarBgColor = "#2b6cb0"
         }
     };
