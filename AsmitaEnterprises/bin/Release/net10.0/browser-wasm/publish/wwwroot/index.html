@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+      content="Asmita Enterprises provides RO, DM, water softener, water treatment plants, home water purifiers, manufacturing, sales and service in Pune, Alandi and Pimpri-Chinchwad. 24/7 service available." />
     <title>Asmita Enterprises | Water Filter & Water Treatment Services in Pune</title>
     <base href="/" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Asmita Enterprises provides water filter, RO, DM, softener and water treatment solutions in Pune and Pimpri-Chinchwad with manufacturing, sales, installation and service support." />
     <meta name="keywords" content="Pune, Pimpri-Chinchwad, Alandi, Water Filter, RO, Water Purifier, Water Treatment, DM Plant, Water Softener, Installation, Service, Manufacturing, Anil Mahajan" />
     <meta name="author" content="Asmita Enterprises" />
 
@@ -26,17 +27,21 @@
     <meta name="twitter:image" content="images/hero-purifier.svg" />
 
     <link rel="icon" type="image/svg+xml" href="images/logo/logo.svg" />
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap 5 CSS (non-render-blocking) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></noscript>
 
     <!-- App Custom CSS -->
     <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Preload Blazor framework for faster boot -->
+    <link rel="preload" href="_framework/blazor.webassembly.js" as="script" crossorigin />
 
     <!-- LocalBusiness JSON-LD Schema -->
     <script type="application/ld+json">
@@ -69,20 +74,36 @@
 
 <body>
     <div id="app">
-        <!-- Initial Loading State -->
+        <!-- Initial Loading State - Water Pour Animation -->
         <div class="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-sky-light text-center p-4">
-            <img src="images/logo/logo.svg" alt="Asmita Enterprises" width="220" height="50" class="mb-4 animate-pulse" />
-            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-                <span class="visually-hidden">Loading...</span>
+            <img src="images/logo/logo.svg" alt="Asmita Enterprises" width="220" height="50" class="mb-5 animate-pulse" />
+
+            <div class="water-loader">
+                <!-- Water stream pouring down -->
+                <div class="water-stream"></div>
+                <!-- Splash droplets -->
+                <div class="splash-drop splash-drop-1"></div>
+                <div class="splash-drop splash-drop-2"></div>
+                <div class="splash-drop splash-drop-3"></div>
+                <!-- Glass -->
+                <div class="glass">
+                    <div class="glass-body">
+                        <div class="water-fill">
+                            <div class="water-surface"></div>
+                        </div>
+                    </div>
+                    <div class="glass-base"></div>
+                </div>
             </div>
-            <p class="mt-3 text-secondary fw-semibold">Loading Pure Water Solutions...</p>
+
+            <p class="mt-5 text-secondary fw-semibold">Loading Pure Water Solutions...</p>
         </div>
     </div>
 
     <div id="blazor-error-ui" class="bg-danger text-white p-3 fixed-bottom text-center" style="display: none;">
         An unhandled error has occurred.
         <a href="." class="reload text-white text-decoration-underline ms-2">Reload</a>
-        <span class="dismiss ms-2 cursor-pointer">🗙</span>
+        <span class="dismiss ms-2 cursor-pointer">X</span>
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>

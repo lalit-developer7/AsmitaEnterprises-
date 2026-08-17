@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "AsmitaEnterprises",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-e6WZBocyftF7ZYMPizl/bFyTuHToCN+rzw3nroqTtW4=",
+    "hash": "sha256-fIuwFCPC0JsWw1jwsDkrJvOzFUPP3IrHTZ2MDsq5FTs=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.vzj2a6aakt.js"
@@ -1236,16 +1236,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "AsmitaEnterprises.wasm",
-        "name": "AsmitaEnterprises.f5r72z71a6.wasm",
-        "hash": "sha256-zRzZ9lSicUblQcJ2wwbhzqrNC05BNlB30KDxaVtwqTc=",
+        "name": "AsmitaEnterprises.uf6e6r88mr.wasm",
+        "hash": "sha256-Gqr/VNiURWM0FBxu/cWhJg21vG5A86WbQcqWA7ba22E=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "AsmitaEnterprises.pdb",
-        "name": "AsmitaEnterprises.ujwkeo5hx5.pdb",
-        "hash": "sha256-NmA4kTNi2Zbr43D7KvsQkUIkaoBSFzvuHaBFXiARkiE=",
+        "name": "AsmitaEnterprises.ayc9o1ubdp.pdb",
+        "hash": "sha256-0gXKmaxCVrtR9p40KXqZ90uIT0v0vAWQeC/2h12TAD0=",
         "cache": "force-cache"
       }
     ]

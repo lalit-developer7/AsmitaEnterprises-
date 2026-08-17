@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>I:\AS\AsmitaEnterprises\bin\Release\net10.0\browser-wasm\publish\</_PublishTargetUrl>
-    <History>True|2026-08-17T10:46:13.2258078Z||;True|2026-08-17T16:14:46.9961202+05:30||;True|2026-08-17T16:12:51.2846123+05:30||;True|2026-08-17T00:42:28.7312307+05:30||;</History>
+    <History>True|2026-08-17T11:41:56.4428800Z||;True|2026-08-17T16:16:13.2258078+05:30||;True|2026-08-17T16:14:46.9961202+05:30||;True|2026-08-17T16:12:51.2846123+05:30||;True|2026-08-17T00:42:28.7312307+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
