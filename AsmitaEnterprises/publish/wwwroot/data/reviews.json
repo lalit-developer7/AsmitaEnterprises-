@@ -1,0 +1,29 @@
+[
+  {
+    "id": "r1",
+    "authorName": "Mandage Parag",
+    "initial": "P",
+    "rating": 5.0,
+    "timeAgo": "2 weeks ago",
+    "comment": "Excellent service experience. Sir arrived on time, checked the water purifier thoroughly, replaced the required parts, and ensured proper functioning before leaving. He also explained the maintenance tips clearly. Highly recommended.",
+    "avatarBgColor": "#718096"
+  },
+  {
+    "id": "r2",
+    "authorName": "Omkar Patil",
+    "initial": "S",
+    "rating": 5.0,
+    "timeAgo": "1 month ago",
+    "comment": "Great service by Asmita Water Solutions. The water purifier installation was quick and professional. The machine is working perfectly and the person was polite and helpful. Highly satisfied.",
+    "avatarBgColor": "#3182ce"
+  },
+  {
+    "id": "r3",
+    "authorName": "Mahesh Raykar",
+    "initial": "R",
+    "rating": 5.0,
+    "timeAgo": "1 month ago",
+    "comment": "I have been using this water filter along with their service for the past 9 years. The water quality has been consistently good, and Mr. Anil Mahajan sir is prompt and professional. Maintenance and part replacements are handled smoothly. Highly satisfied with the product and service.",
+    "avatarBgColor": "#2b6cb0"
+  }
+]

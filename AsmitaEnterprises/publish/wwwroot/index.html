@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+      content="Asmita Enterprises provides RO, DM, water softener, water treatment plants, home water purifiers, manufacturing, sales and service in Pune, Alandi and Pimpri-Chinchwad. 24/7 service available." />
+    <title>Asmita Enterprises | Water Filter & Water Treatment Services in Pune</title>
+    <base href="/" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Pune, Pimpri-Chinchwad, Alandi, Water Filter, RO, Water Purifier, Water Treatment, DM Plant, Water Softener, Installation, Service, Manufacturing, Anil Mahajan" />
+    <meta name="author" content="Asmita Enterprises" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Asmita Enterprises | Water Filter & Water Treatment Services in Pune" />
+    <meta property="og:description" content="Quality Water Filter Solutions at Your Budget. Sales, installation, servicing, and custom assembly in Pune & Pimpri-Chinchwad." />
+    <meta property="og:image" content="images/hero-purifier.svg" />
+    <meta property="og:url" content="https://asmitaenterprises.com" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Asmita Enterprises | Water Filter & Water Treatment Services in Pune" />
+    <meta name="twitter:description" content="Quality Water Filter Solutions at Your Budget in Pune & Pimpri-Chinchwad." />
+    <meta name="twitter:image" content="images/hero-purifier.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="images/logo/logo.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS (non-render-blocking) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></noscript>
+
+    <!-- App Custom CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Preload Blazor framework for faster boot -->
+    <link rel="preload" href="_framework/blazor.webassembly.js" as="script" crossorigin />
+
+    <!-- LocalBusiness JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Asmita Enterprises",
+      "image": "images/hero-purifier.svg",
+      "telephone": "+91 98345 55868",
+      "email": "asmitaenterprises710@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alandi",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412105",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Pune", "Pimpri-Chinchwad"],
+      "url": "https://asmitaenterprises.com",
+      "sameAs": [
+        "https://www.facebook.com/share/199Jq7Le9k/?mibextid=wwXIfr",
+        "https://maps.app.goo.gl/yf3wq2tYL3dgzh5f8?g_st=ic",
+        "https://jsdl.in/RSL-KIZ1786889252",
+        "https://share.google/RmEpfBdhuNt04Cpda"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Initial Loading State - Water Pour Animation -->
+        <div class="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-sky-light text-center p-4">
+            <img src="images/logo/logo.svg" alt="Asmita Enterprises" width="220" height="50" class="mb-5 animate-pulse" />
+
+            <div class="water-loader">
+                <!-- Water stream pouring down -->
+                <div class="water-stream"></div>
+                <!-- Splash droplets -->
+                <div class="splash-drop splash-drop-1"></div>
+                <div class="splash-drop splash-drop-2"></div>
+                <div class="splash-drop splash-drop-3"></div>
+                <!-- Glass -->
+                <div class="glass">
+                    <div class="glass-body">
+                        <div class="water-fill">
+                            <div class="water-surface"></div>
+                        </div>
+                    </div>
+                    <div class="glass-base"></div>
+                </div>
+            </div>
+
+            <p class="mt-5 text-secondary fw-semibold">Loading Pure Water Solutions...</p>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui" class="bg-danger text-white p-3 fixed-bottom text-center" style="display: none;">
+        An unhandled error has occurred.
+        <a href="." class="reload text-white text-decoration-underline ms-2">Reload</a>
+        <span class="dismiss ms-2 cursor-pointer">X</span>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

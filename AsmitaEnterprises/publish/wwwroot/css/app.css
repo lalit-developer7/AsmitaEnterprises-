@@ -1,0 +1,743 @@
+/* ==========================================================================
+   ASMITA ENTERPRISES - DESIGN SYSTEM & BRAND STYLESHEET
+   ========================================================================== */
+
+:root {
+  --font-heading: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Color System matching Reference Design */
+  --color-navy: #0a2540;
+  --color-navy-dark: #07192b;
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-sky-light: #f0f7ff;
+  --color-sky-medium: #e0f2fe;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe57;
+  --color-text-dark: #1e293b;
+  --color-text-muted: #64748b;
+  --color-card-border: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.text-navy {
+  color: var(--color-navy) !important;
+}
+
+.bg-sky-light {
+  background-color: var(--color-sky-light) !important;
+}
+
+.tracking-wide {
+  letter-spacing: 1px;
+}
+
+.extra-small {
+  font-size: 0.8125rem;
+}
+
+/* ===== CUSTOM BUTTONS ===== */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #ffffff;
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  border-color: var(--color-whatsapp);
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover, .btn-whatsapp:focus {
+  background-color: var(--color-whatsapp-dark);
+  border-color: var(--color-whatsapp-dark);
+  color: #ffffff;
+}
+
+/* ===== HEADER & NAV ===== */
+.header-container {
+  z-index: 1040;
+}
+
+.nav-link-custom {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0.25rem;
+  position: relative;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: var(--color-primary);
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+/* ===== SECTION HEADINGS ===== */
+.section-heading {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+}
+
+/* ===== HERO SECTION - WATER DROP RIPPLE ANIMATION ===== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(240,247,255,0.5) 0%, rgba(248,250,252,0) 100%);
+}
+
+.hero-section .row.align-items-center {
+  position: relative;
+}
+
+.hero-section .row.align-items-center > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section .container-xl {
+  position: relative;
+}
+
+/* ── Ripple ring 1: top-left area ── */
+.hero-section .row.align-items-center::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: 8%;
+  left: 5%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, transparent 27%, rgba(2,132,199,0.10) 28%, transparent 29%),
+    radial-gradient(circle, transparent 42%, rgba(2,132,199,0.06) 43%, transparent 44%),
+    radial-gradient(circle, transparent 57%, rgba(2,132,199,0.03) 58%, transparent 59%);
+  animation: ripple-spread 4.5s ease-out infinite;
+}
+
+/* ── Ripple ring 2: center-right area ── */
+.hero-section .row.align-items-center::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  bottom: 5%;
+  right: 8%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, transparent 25%, rgba(2,132,199,0.09) 26%, transparent 27%),
+    radial-gradient(circle, transparent 40%, rgba(2,132,199,0.06) 41%, transparent 42%),
+    radial-gradient(circle, transparent 55%, rgba(2,132,199,0.03) 56%, transparent 57%);
+  animation: ripple-spread 5.5s ease-out infinite 2.5s;
+}
+
+/* ── Ripple ring 3: top-center via container ── */
+.hero-section .container-xl::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -5%;
+  left: 45%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, transparent 26%, rgba(2,132,199,0.08) 27%, transparent 28%),
+    radial-gradient(circle, transparent 44%, rgba(2,132,199,0.05) 45%, transparent 46%);
+  animation: ripple-spread 6s ease-out infinite 1s;
+}
+
+/* ── Ripple ring 4: bottom-left via container ── */
+.hero-section .container-xl::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  bottom: -8%;
+  left: 25%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, transparent 28%, rgba(2,132,199,0.07) 29%, transparent 30%),
+    radial-gradient(circle, transparent 45%, rgba(2,132,199,0.04) 46%, transparent 47%);
+  animation: ripple-spread 5s ease-out infinite 3.5s;
+}
+
+/* ── Ripple ring 5 removed — replaced by filter pour below ── */
+.hero-section .hero-content {
+  position: relative;
+}
+
+@keyframes ripple-spread {
+  0%   { transform: scale(0.2); opacity: 0; }
+  8%   { opacity: 1; }
+  65%  { opacity: 0.4; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+
+
+/* ── Drop B: top-center falling ── */
+.hero-section .hero-visual-wrapper {
+  position: relative;
+}
+
+.hero-section .hero-visual-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  top: 2%;
+  right: 30%;
+  background: radial-gradient(ellipse at 50% 25%, rgba(2,132,199,0.24) 0%, rgba(2,132,199,0.06) 80%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  pointer-events: none;
+  z-index: 0;
+  animation: drop-fall 3.8s ease-in infinite 1.2s;
+}
+
+/* ── Drop C: right side falling ── */
+.hero-section .hero-visual-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  top: 0%;
+  right: 12%;
+  background: radial-gradient(ellipse at 50% 25%, rgba(2,132,199,0.22) 0%, rgba(2,132,199,0.06) 80%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  pointer-events: none;
+  z-index: 0;
+  animation: drop-fall 4.5s ease-in infinite 2.8s;
+}
+
+@keyframes drop-fall {
+  0%   { transform: translateY(0) scaleY(1) scaleX(1); opacity: 0; }
+  4%   { opacity: 0.9; }
+  40%  { transform: translateY(100px) scaleY(1.15) scaleX(0.85); opacity: 0.75; }
+  48%  { transform: translateY(130px) scaleY(0.35) scaleX(1.6); opacity: 0.25; }
+  55%  { transform: translateY(130px) scaleY(0.15) scaleX(2.2); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ══════════════════════════════════════════════════
+   WATER FILTER POUR — stream into glass shape
+   ══════════════════════════════════════════════════ */
+
+.hero-section .hero-headline {
+  position: relative;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Drop D: falling from headline area ── */
+.hero-section .hero-headline::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  top: -15%;
+  right: 10%;
+  background: radial-gradient(ellipse at 50% 25%, rgba(2,132,199,0.24) 0%, rgba(2,132,199,0.06) 80%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  pointer-events: none;
+  z-index: 0;
+  animation: drop-fall 4s ease-in infinite 0.8s;
+}
+
+/* ── Drop E: falling from headline left ── */
+.hero-section .hero-headline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  top: -10%;
+  left: 15%;
+  background: radial-gradient(ellipse at 50% 25%, rgba(2,132,199,0.20) 0%, rgba(2,132,199,0.05) 80%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  pointer-events: none;
+  z-index: 0;
+  animation: drop-fall 5s ease-in infinite 2s;
+}
+
+
+
+/* ===== LOADING SCREEN - WATER POUR ANIMATION ===== */
+.water-loader {
+  position: relative;
+  width: 140px;
+  height: 200px;
+}
+
+/* ── Glass Body ── */
+.glass {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.glass-body {
+  width: 90px;
+  height: 120px;
+  border: 3px solid #94a3b8;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.3);
+}
+
+.glass-base {
+  width: 100px;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 0 0 6px 6px;
+  margin: 0 auto;
+  position: relative;
+  left: -3.5px;
+}
+
+/* ── Water Fill ── */
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  background: linear-gradient(180deg, rgba(56,189,248,0.6) 0%, rgba(2,132,199,0.8) 100%);
+  animation: fill-water 3s ease-in-out infinite;
+}
+
+@keyframes fill-water {
+  0%   { height: 0%; }
+  60%  { height: 85%; }
+  75%  { height: 85%; }
+  100% { height: 0%; }
+}
+
+/* ── Water Surface Wave ── */
+.water-surface {
+  position: absolute;
+  top: -4px;
+  left: -5%;
+  width: 110%;
+  height: 8px;
+  background: rgba(125,211,252,0.5);
+  border-radius: 50%;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(1.8); }
+}
+
+/* ── Water Stream ── */
+.water-stream {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 65px;
+  background: linear-gradient(180deg, rgba(56,189,248,0.1) 0%, rgba(2,132,199,0.7) 60%, rgba(2,132,199,0.9) 100%);
+  border-radius: 2px;
+  animation: pour-stream 3s ease-in-out infinite;
+}
+
+@keyframes pour-stream {
+  0%   { opacity: 0; height: 0; }
+  5%   { opacity: 1; height: 65px; }
+  60%  { opacity: 1; height: 65px; }
+  70%  { opacity: 0; height: 0; }
+  100% { opacity: 0; height: 0; }
+}
+
+/* ── Splash Droplets ── */
+.splash-drop {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(2,132,199,0.6);
+  top: 62px;
+  left: 50%;
+  animation: splash 3s ease-in-out infinite;
+}
+
+.splash-drop-1 { animation-delay: 0.15s; margin-left: -12px; }
+.splash-drop-2 { animation-delay: 0.3s; margin-left: 4px; }
+.splash-drop-3 { animation-delay: 0.25s; margin-left: 14px; }
+
+@keyframes splash {
+  0%, 60%, 70%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+  65% { opacity: 1; transform: translateY(-8px) scale(1); }
+  68% { opacity: 0; transform: translateY(4px) scale(0.6); }
+}
+
+/* ===== HERO SECTION - TYPING ANIMATION ===== */
+.typing-wrapper {
+  display: inline;
+}
+
+.typing-text {
+  display: inline;
+}
+
+.typing-cursor {
+  display: inline-block;
+  font-weight: 300;
+  animation: blink-cursor 0.8s step-end infinite;
+  color: var(--color-primary);
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== CARD TRANSITIONS ===== */
+.transition-all {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover, .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1) !important;
+}
+
+.product-card {
+  border-color: var(--color-card-border) !important;
+}
+
+.product-card:hover {
+  border-color: var(--color-primary) !important;
+}
+
+/* ===== TRUST STRIP STAT BOX ===== */
+.stat-box {
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-2px);
+}
+
+.stat-icon-wrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sky-light);
+  border-radius: 50%;
+}
+
+.stat-number {
+  line-height: 1.2;
+}
+
+.stat-label {
+  line-height: 1.3;
+}
+
+/* ===== IMAGE DROP SHADOW ===== */
+.filter-drop-shadow {
+  filter: drop-shadow(0 16px 24px rgba(15, 23, 42, 0.12));
+}
+
+.hero-image {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* ===== FLOATING WHATSAPP BUTTON ===== */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-whatsapp);
+  z-index: 1050;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.floating-whatsapp-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--color-whatsapp-dark);
+}
+
+.floating-whatsapp-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-whatsapp);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* ===== MOBILE DRAWER ===== */
+.mobile-drawer {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-sky-light);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-primary);
+}
+
+/* ===== REVIEW UTILITIES ===== */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hover-text-white:hover {
+  color: #ffffff !important;
+}
+
+/* ===== FOOTER SOCIAL ICON BADGES ===== */
+.social-icon-badge {
+  transition: transform 0.2s ease;
+}
+
+.social-icon-badge:hover {
+  transform: scale(1.15);
+}
+
+/* ===== SERVICE CARD HOVER ===== */
+.service-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover .service-icon-box {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+
+.service-card:hover .service-icon-box svg {
+  color: #ffffff;
+}
+
+/* ===== PRODUCT IMAGE OBJECT FIT ===== */
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.max-h-100 {
+  max-height: 100%;
+}
+
+/* ===== LOADING SPINNER ANIMATION ===== */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===== RESPONSIVE OVERRIDES ===== */
+@media (max-width: 1199.98px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section-heading {
+    font-size: 1.4rem;
+  }
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+  .border-start-lg {
+    border-left: none !important;
+  }
+  .hero-image {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-headline {
+    font-size: 1.8rem;
+  }
+  .hero-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .hero-image {
+    max-height: 260px;
+  }
+  .hero-content .d-flex.flex-wrap {
+    gap: 0.5rem !important;
+  }
+  .hero-content .btn {
+    font-size: 0.8rem !important;
+    padding: 0.35rem 0.75rem !important;
+  }
+  .stat-icon-wrap {
+    width: 32px;
+    height: 32px;
+  }
+  .stat-icon-wrap svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .floating-whatsapp-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .floating-whatsapp-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+  .hero-headline {
+    font-size: 1.6rem;
+  }
+  .hero-content .btn {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+  .section-heading {
+    font-size: 1.3rem;
+  }
+  .contact-section .h3 {
+    font-size: 1.1rem;
+  }
+  .brand-logo {
+    width: 160px !important;
+    height: auto !important;
+  }
+  .lang-switcher .btn {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .hero-headline {
+    font-size: 1.35rem;
+  }
+  .hero-content .btn {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.5rem !important;
+    gap: 0.15rem !important;
+  }
+  .hero-content .btn svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
