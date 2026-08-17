@@ -16,6 +16,5 @@ obj/
 .DS_Store
 Thumbs.db
 
-# Keep production static publish output
-!publish/
-!publish/**
+# Publish output
+publish/
