@@ -63,6 +63,5 @@ public class ProductService
             DisplayOrder = 5
         }
     };
-
     public IEnumerable<Product> GetProducts() => _staticProducts;
 }
