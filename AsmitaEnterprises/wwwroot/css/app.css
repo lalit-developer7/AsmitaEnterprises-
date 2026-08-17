@@ -330,14 +330,118 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-/* ===== LOADING SCREEN - 50% FASTER ===== */
-.loading-splash {
-  animation: splash-fade-out 0.4s ease-out forwards;
+/* ===== LOADING SCREEN - WATER POUR ANIMATION ===== */
+.water-loader {
+  position: relative;
+  width: 140px;
+  height: 200px;
 }
 
-@keyframes splash-fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; pointer-events: none; }
+/* ── Glass Body ── */
+.glass {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.glass-body {
+  width: 90px;
+  height: 120px;
+  border: 3px solid #94a3b8;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.3);
+}
+
+.glass-base {
+  width: 100px;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 0 0 6px 6px;
+  margin: 0 auto;
+  position: relative;
+  left: -3.5px;
+}
+
+/* ── Water Fill ── */
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  background: linear-gradient(180deg, rgba(56,189,248,0.6) 0%, rgba(2,132,199,0.8) 100%);
+  animation: fill-water 3s ease-in-out infinite;
+}
+
+@keyframes fill-water {
+  0%   { height: 0%; }
+  60%  { height: 85%; }
+  75%  { height: 85%; }
+  100% { height: 0%; }
+}
+
+/* ── Water Surface Wave ── */
+.water-surface {
+  position: absolute;
+  top: -4px;
+  left: -5%;
+  width: 110%;
+  height: 8px;
+  background: rgba(125,211,252,0.5);
+  border-radius: 50%;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(1.8); }
+}
+
+/* ── Water Stream ── */
+.water-stream {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 65px;
+  background: linear-gradient(180deg, rgba(56,189,248,0.1) 0%, rgba(2,132,199,0.7) 60%, rgba(2,132,199,0.9) 100%);
+  border-radius: 2px;
+  animation: pour-stream 3s ease-in-out infinite;
+}
+
+@keyframes pour-stream {
+  0%   { opacity: 0; height: 0; }
+  5%   { opacity: 1; height: 65px; }
+  60%  { opacity: 1; height: 65px; }
+  70%  { opacity: 0; height: 0; }
+  100% { opacity: 0; height: 0; }
+}
+
+/* ── Splash Droplets ── */
+.splash-drop {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(2,132,199,0.6);
+  top: 62px;
+  left: 50%;
+  animation: splash 3s ease-in-out infinite;
+}
+
+.splash-drop-1 { animation-delay: 0.15s; margin-left: -12px; }
+.splash-drop-2 { animation-delay: 0.3s; margin-left: 4px; }
+.splash-drop-3 { animation-delay: 0.25s; margin-left: 14px; }
+
+@keyframes splash {
+  0%, 60%, 70%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+  65% { opacity: 1; transform: translateY(-8px) scale(1); }
+  68% { opacity: 0; transform: translateY(4px) scale(0.6); }
 }
 
 /* ===== HERO SECTION - TYPING ANIMATION ===== */
